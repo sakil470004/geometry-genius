@@ -19,9 +19,18 @@ function displayResult(elementName, area) {
         `
     areaCalculation.appendChild(newLi);
 }
+// triangle
 document.getElementById('calculate-triangle').addEventListener('click', function () {
     const triangleValueB = getInputFieldValueById('triangle-b');
     const triangleValueH = getInputFieldValueById('triangle-h');
     const areaOfTriangle = (0.5 * triangleValueB * triangleValueH).toFixed(2);
     displayResult('Triangle', areaOfTriangle)
+})
+//rectangle
+document.getElementById('rectangle-calculate').addEventListener('click', function () {
+    const rectangleValueW = getInputFieldValueById('rectangle-w');
+    const rectangleValueL = getInputFieldValueById('rectangle-l');
+    const areaOfRectangle = (rectangleValueW * rectangleValueL).toFixed(2);
+    displayResult('Rectangle', areaOfRectangle)
+
 })
