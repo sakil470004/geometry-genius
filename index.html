@@ -43,8 +43,10 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Triangle</h3>
                     <p class="text-gray-600 ">Area (A) = 0.5 x b x h</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="h"> cm
+                        <input id="triangle-b" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                            placeholder="b"> cm
+                        <input id="triangle-h" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                            placeholder="h"> cm
                     </div>
                     <button id="calculate-triangle"
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>
@@ -124,6 +126,9 @@
             <div class="border  rounded-lg pt-8 max-h-[70vh]">
                 <h4 class="text-xl text-center underline
                  font-semibold text-gray-600">Area Calculation</h4>
+                <ul id="area-calculation" class="list-decimal pl-6 pr-2">
+                    <!-- here calculation will stay -->
+                </ul>
             </div>
         </section>
     </main>
