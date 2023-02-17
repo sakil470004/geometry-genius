@@ -43,9 +43,9 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Triangle</h3>
                     <p class="text-gray-600 ">Area (A) = 0.5 x b x h</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input id="triangle-b" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                        <input min="0"id="triangle-b" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
                             placeholder="b"> cm
-                        <input id="triangle-h" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                        <input min="0"id="triangle-h" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
                             placeholder="h"> cm
                     </div>
                     <button id="calculate-triangle"
@@ -59,26 +59,26 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Rectangle</h3>
                     <p class="text-gray-600 ">Area (A) = W x l</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input id="rectangle-w" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                        <input min="0"id="rectangle-w" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
                             placeholder="w"> cm
-                        <input id="rectangle-l" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
+                        <input min="0"id="rectangle-l" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number"
                             placeholder="l"> cm
                     </div>
                     <button id="rectangle-calculate"
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Parallelogram -->
-                <div class="p-12 text-center border  rounded-lg">
+                <div class="p-12 text-center border rounded-lg">
                     <div>
                         <img class="w-full h-[150px]" src="./images/parallelogram.png" alt="">
                     </div>
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Parallelogram</h3>
                     <p class="text-gray-600 ">Area (A) = b x h</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="h"> cm
+                        <input min="0"id="parallelogram-b" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
+                        <input min="0"id="parallelogram-h" class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="h"> cm
                     </div>
-                    <button
+                    <button id="parallelogram-calculate"
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>
                 </div>
                 <!-- Rhombus -->
@@ -89,8 +89,8 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Rhombus</h3>
                     <p class="text-gray-600 ">Area (A) = 0.5 x d <sub>1</sub> x d <sub>2</sub></p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="d1"> cm
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="d2"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="d1"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="d2"> cm
                     </div>
                     <button
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>
@@ -103,8 +103,8 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Pentagon</h3>
                     <p class="text-gray-600 ">Area (A) = 0.5 x p x b</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="p"> cm
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="p"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
                     </div>
                     <button
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>
@@ -117,8 +117,8 @@
                     <h3 class="mt-12 mb-2 text-2xl font-semibold text-gray-600">Ellipse</h3>
                     <p class="text-gray-600 ">Area (A)= &#x03C0; ab</p>
                     <div class="grid grid-cols-4 items-center mt-5 mb-12">
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="a"> cm
-                        <input class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="a"> cm
+                        <input min="0"class="placeholder:text-black px-3 py-2 bg-gray-100 " type="number" placeholder="b"> cm
                     </div>
                     <button
                         class="text-xl bg-sky-500 text-white font-bold px-8 py-2 rounded-lg w-full">Calculate</button>

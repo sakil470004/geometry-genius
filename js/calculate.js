@@ -9,14 +9,12 @@ function displayResult(elementName, area) {
     const areaCalculation = document.getElementById('area-calculation');
     const newLi = document.createElement('li');
     newLi.innerHTML =
-        `
-            <div class="flex justify-between items-center my-4">
+        `<div class="flex justify-between gap-2 items-center my-4 text-sm">
             <span>${elementName}</span>
             <span><span>${area}</span> cm <sup>2</sup></span>
-            <button class="text-sm bg-sky-500 text-white font-bold px-4 py-1 rounded-lg">Convert to m
+            <button class="bg-sky-500 text-white font-bold px-4 py-1 rounded-lg">Convert to m
                 <sup>2</sup></button>
-            </div>
-        `
+        </div>`
     areaCalculation.appendChild(newLi);
 }
 // triangle
@@ -32,5 +30,13 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
     const rectangleValueL = getInputFieldValueById('rectangle-l');
     const areaOfRectangle = (rectangleValueW * rectangleValueL).toFixed(2);
     displayResult('Rectangle', areaOfRectangle)
+
+})
+//parallelogram
+document.getElementById('parallelogram-calculate').addEventListener('click', function () {
+    const parallelogramValueB = getInputFieldValueById('parallelogram-b');
+    const parallelogramValueH = getInputFieldValueById('parallelogram-h');
+    const areaOfParallelogram = (parallelogramValueB * parallelogramValueH).toFixed(2);
+    displayResult('Parallelogram', areaOfParallelogram);
 
 })
