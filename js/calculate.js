@@ -7,7 +7,6 @@ document.getElementById('calculate-triangle').addEventListener('click', function
         return;
     }
     const areaOfTriangle = (0.5 * triangleValueB * triangleValueH).toFixed(2);
-    console.log(triangleValueB,triangleValueH,areaOfTriangle)
     displayResult('Triangle', areaOfTriangle)
 })
 //rectangle

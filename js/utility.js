@@ -24,7 +24,7 @@ function isInputValid(number1, number2) {
         alert('Please give Valid input')
         return false;
     }
-    if (isNaN(number1,number2)) {
+    if (isNaN(number1) || isNaN(number2)) {
         alert('Please give Valid input')
         return false;
     }
