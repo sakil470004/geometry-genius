@@ -1,6 +1,6 @@
 function getInputFieldValueById(fieldId) {
     const inputElement = document.getElementById(fieldId)
-    const inputValue = inputElement.value;
+    const inputValue = parseFloat(inputElement.value);
     inputElement.value = '';
     return inputValue;
 }
@@ -23,7 +23,7 @@ function isInputValid(number1, number2) {
         alert('Please give Valid input')
         return false;
     }
-    if (typeof number1 !== 'number' || number2 !== 'number') {
+    if (typeof number1 !== 'number' || typeof number2 !== 'number') {
         alert('Please give Valid input')
         return false;
     }
@@ -33,6 +33,7 @@ function isInputValid(number1, number2) {
 document.getElementById('calculate-triangle').addEventListener('click', function () {
     const triangleValueB = getInputFieldValueById('triangle-b');
     const triangleValueH = getInputFieldValueById('triangle-h');
+    // validation
     if (!isInputValid(triangleValueB, triangleValueH)) {
         return;
     }
@@ -43,6 +44,10 @@ document.getElementById('calculate-triangle').addEventListener('click', function
 document.getElementById('rectangle-calculate').addEventListener('click', function () {
     const rectangleValueW = getInputFieldValueById('rectangle-w');
     const rectangleValueL = getInputFieldValueById('rectangle-l');
+    // validation
+    if (!isInputValid(rectangleValueL, rectangleValueW)) {
+        return;
+    }
     const areaOfRectangle = (rectangleValueW * rectangleValueL).toFixed(2);
     displayResult('Rectangle', areaOfRectangle)
 })
@@ -50,6 +55,10 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
 document.getElementById('parallelogram-calculate').addEventListener('click', function () {
     const parallelogramValueB = getInputFieldValueById('parallelogram-b');
     const parallelogramValueH = getInputFieldValueById('parallelogram-h');
+    // validation
+    if (!isInputValid(parallelogramValueB, parallelogramValueH)) {
+        return;
+    }
     const areaOfParallelogram = (parallelogramValueB * parallelogramValueH).toFixed(2);
     displayResult('Parallelogram', areaOfParallelogram);
 })
@@ -57,6 +66,10 @@ document.getElementById('parallelogram-calculate').addEventListener('click', fun
 document.getElementById('rhombus-calculate').addEventListener('click', function () {
     const rhombusValueD1 = getInputFieldValueById('rhombus-d1');
     const rhombusValueD2 = getInputFieldValueById('rhombus-d2');
+    // validation
+    if (!isInputValid(rhombusValueD1,rhombusValueD2)) {
+        return;
+    }
     const areaOfRhombus = (0.5 * rhombusValueD1 * rhombusValueD2).toFixed(2);
     displayResult('Rhombus', areaOfRhombus);
 })
@@ -64,6 +77,10 @@ document.getElementById('rhombus-calculate').addEventListener('click', function 
 document.getElementById('pentagon-calculate').addEventListener('click', function () {
     const pentagonValueP = getInputFieldValueById('pentagon-p');
     const pentagonValueB = getInputFieldValueById('pentagon-b');
+    // validation
+    if (!isInputValid(pentagonValueB,pentagonValueP)) {
+        return;
+    }
     const areaOfPentagon = (0.5 * pentagonValueB * pentagonValueP).toFixed(2);
     displayResult('Pentagon', areaOfPentagon);
 })
@@ -71,6 +88,10 @@ document.getElementById('pentagon-calculate').addEventListener('click', function
 document.getElementById('ellipse-calculate').addEventListener('click', function () {
     const ellipseValueA = getInputFieldValueById('ellipse-a');
     const ellipseValueB = getInputFieldValueById('ellipse-b');
+    // validation
+    if (!isInputValid(ellipseValueA,ellipseValueB)) {
+        return;
+    }
     const areaOfEllipse = (3.14 * ellipseValueA * ellipseValueB).toFixed(2);
     displayResult('Pentagon', areaOfEllipse);
 
