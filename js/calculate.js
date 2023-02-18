@@ -1,7 +1,7 @@
 function getInputFieldValueById(fieldId) {
     const inputElement = document.getElementById(fieldId)
-    inputElement.value = '';
     const inputValue = inputElement.value;
+    inputElement.value = '';
     return inputValue;
 }
 // element create in this function and add to the area calculation Side
@@ -45,4 +45,11 @@ document.getElementById('rhombus-calculate').addEventListener('click', function 
     const rhombusValueD2 = getInputFieldValueById('rhombus-d2');
     const areaOfRhombus = (0.5 * rhombusValueD1 * rhombusValueD2).toFixed(2);
     displayResult('Rhombus', areaOfRhombus);
+})
+//pentagon
+document.getElementById('pentagon-calculate').addEventListener('click', function () {
+    const pentagonValueP = getInputFieldValueById('pentagon-p');
+    const pentagonValueB = getInputFieldValueById('pentagon-b');
+    const areaOfPentagon = (0.5 * pentagonValueB * pentagonValueP).toFixed(2);
+    displayResult('Pentagon', areaOfPentagon);
 })
