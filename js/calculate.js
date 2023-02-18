@@ -18,10 +18,24 @@ function displayResult(elementName, area) {
         </div>`
     areaCalculation.appendChild(newLi);
 }
+function isInputValid(number1, number2) {
+    if (number1 < 0 || number2 < 0) {
+        alert('Please give Valid input')
+        return false;
+    }
+    if (typeof number1 !== 'number' || number2 !== 'number') {
+        alert('Please give Valid input')
+        return false;
+    }
+    return true;
+}
 // triangle
 document.getElementById('calculate-triangle').addEventListener('click', function () {
     const triangleValueB = getInputFieldValueById('triangle-b');
     const triangleValueH = getInputFieldValueById('triangle-h');
+    if (!isInputValid(triangleValueB, triangleValueH)) {
+        return;
+    }
     const areaOfTriangle = (0.5 * triangleValueB * triangleValueH).toFixed(2);
     displayResult('Triangle', areaOfTriangle)
 })
@@ -52,4 +66,12 @@ document.getElementById('pentagon-calculate').addEventListener('click', function
     const pentagonValueB = getInputFieldValueById('pentagon-b');
     const areaOfPentagon = (0.5 * pentagonValueB * pentagonValueP).toFixed(2);
     displayResult('Pentagon', areaOfPentagon);
+})
+//ellipse
+document.getElementById('ellipse-calculate').addEventListener('click', function () {
+    const ellipseValueA = getInputFieldValueById('ellipse-a');
+    const ellipseValueB = getInputFieldValueById('ellipse-b');
+    const areaOfEllipse = (3.14 * ellipseValueA * ellipseValueB).toFixed(2);
+    displayResult('Pentagon', areaOfEllipse);
+
 })
