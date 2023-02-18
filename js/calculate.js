@@ -1,5 +1,6 @@
 function getInputFieldValueById(fieldId) {
     const inputElement = document.getElementById(fieldId)
+    inputElement.value = '';
     const inputValue = inputElement.value;
     return inputValue;
 }
@@ -30,7 +31,6 @@ document.getElementById('rectangle-calculate').addEventListener('click', functio
     const rectangleValueL = getInputFieldValueById('rectangle-l');
     const areaOfRectangle = (rectangleValueW * rectangleValueL).toFixed(2);
     displayResult('Rectangle', areaOfRectangle)
-
 })
 //parallelogram
 document.getElementById('parallelogram-calculate').addEventListener('click', function () {
@@ -38,5 +38,11 @@ document.getElementById('parallelogram-calculate').addEventListener('click', fun
     const parallelogramValueH = getInputFieldValueById('parallelogram-h');
     const areaOfParallelogram = (parallelogramValueB * parallelogramValueH).toFixed(2);
     displayResult('Parallelogram', areaOfParallelogram);
-
+})
+//rhombus 
+document.getElementById('rhombus-calculate').addEventListener('click', function () {
+    const rhombusValueD1 = getInputFieldValueById('rhombus-d1');
+    const rhombusValueD2 = getInputFieldValueById('rhombus-d2');
+    const areaOfRhombus = (0.5 * rhombusValueD1 * rhombusValueD2).toFixed(2);
+    displayResult('Rhombus', areaOfRhombus);
 })
