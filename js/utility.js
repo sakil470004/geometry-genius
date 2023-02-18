@@ -18,8 +18,13 @@ function displayResult(elementName, area) {
         </div>`
     areaCalculation.appendChild(newLi);
 }
+// check input valid or not
 function isInputValid(number1, number2) {
     if (number1 < 0 || number2 < 0) {
+        alert('Please give Valid input')
+        return false;
+    }
+    if (isNaN(number1,number2)) {
         alert('Please give Valid input')
         return false;
     }
@@ -28,4 +33,13 @@ function isInputValid(number1, number2) {
         return false;
     }
     return true;
+}
+// it generate Random color
+function generateRandomColor() {
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal;
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);
+    return `#${randColor.toUpperCase()}`
 }

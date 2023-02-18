@@ -1,4 +1,3 @@
-
 // triangle
 document.getElementById('calculate-triangle').addEventListener('click', function () {
     const triangleValueB = getInputFieldValueById('triangle-b');
@@ -8,6 +7,7 @@ document.getElementById('calculate-triangle').addEventListener('click', function
         return;
     }
     const areaOfTriangle = (0.5 * triangleValueB * triangleValueH).toFixed(2);
+    console.log(triangleValueB,triangleValueH,areaOfTriangle)
     displayResult('Triangle', areaOfTriangle)
 })
 //rectangle
@@ -37,7 +37,7 @@ document.getElementById('rhombus-calculate').addEventListener('click', function 
     const rhombusValueD1 = getInputFieldValueById('rhombus-d1');
     const rhombusValueD2 = getInputFieldValueById('rhombus-d2');
     // validation
-    if (!isInputValid(rhombusValueD1,rhombusValueD2)) {
+    if (!isInputValid(rhombusValueD1, rhombusValueD2)) {
         return;
     }
     const areaOfRhombus = (0.5 * rhombusValueD1 * rhombusValueD2).toFixed(2);
@@ -48,7 +48,7 @@ document.getElementById('pentagon-calculate').addEventListener('click', function
     const pentagonValueP = getInputFieldValueById('pentagon-p');
     const pentagonValueB = getInputFieldValueById('pentagon-b');
     // validation
-    if (!isInputValid(pentagonValueB,pentagonValueP)) {
+    if (!isInputValid(pentagonValueB, pentagonValueP)) {
         return;
     }
     const areaOfPentagon = (0.5 * pentagonValueB * pentagonValueP).toFixed(2);
@@ -59,10 +59,18 @@ document.getElementById('ellipse-calculate').addEventListener('click', function 
     const ellipseValueA = getInputFieldValueById('ellipse-a');
     const ellipseValueB = getInputFieldValueById('ellipse-b');
     // validation
-    if (!isInputValid(ellipseValueA,ellipseValueB)) {
+    if (!isInputValid(ellipseValueA, ellipseValueB)) {
         return;
     }
     const areaOfEllipse = (3.14 * ellipseValueA * ellipseValueB).toFixed(2);
     displayResult('Pentagon', areaOfEllipse);
 
 })
+
+const areaElements = document.getElementsByClassName('area-card');
+for (const singleArea of areaElements) {
+    singleArea.addEventListener('mouseenter',function(){
+        singleArea.style.backgroundColor=generateRandomColor();
+ 
+    })
+}
